@@ -1,6 +1,7 @@
 'use client';
 
 import { FC } from 'react'
+import { twMerge } from 'tailwind-merge';
 
 
 interface Props{
@@ -10,7 +11,7 @@ interface Props{
 
 const Box:FC<Props> = ({children, className}) => {
         return (
-            <div>
+            <div className={twMerge(`bg-neutral-900 rounded-lg h-fit w-full `, className)}>
                 {children}
             </div>
     )
