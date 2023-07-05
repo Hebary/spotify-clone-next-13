@@ -17,10 +17,10 @@ const SidebarItem:FC<Props> = ({ icon:Icon, label, active, href }) => {
      return (
         <Link
             href={href}
-            className={twMerge(`flex h-auto items-center w-full gap-x-4 py-1 text-md font-medium cursor-pointer hover:text-white transition text-neutral-400 ` , active && 'text-white')}
+            className={twMerge(`flex flex-row h-auto items-center w-full gap-x-4 py-1 text-md font-medium cursor-pointer hover:text-white transition text-neutral-400 ` , active && 'text-white')}
         >
             <Icon size={26}/>
-            <p className='truncate w-ful'>{label}</p>            
+            <p className='truncate w-full'>{label}</p>            
         
         </Link>
     )
