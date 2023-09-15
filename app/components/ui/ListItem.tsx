@@ -17,13 +17,14 @@ const ListItem:FC<Props> = ({ name, image, href }) => {
     const router = useRouter();
     const onClick = () => {
         //Auht before push
-        router.push(href)
+        router.push(href);
     }
 
 
     return (
         // group className Usage
         <button
+            onClick={ onClick }
             className='relative group flex items-center rounded-md gap-x-4 overflow-hidden bg-neutral-100/10 hover:bg-neutral-100/20 transition pr-4 cursor-pointer'
         >
             
@@ -31,7 +32,7 @@ const ListItem:FC<Props> = ({ name, image, href }) => {
                 <Image
                     className='object-cover'
                     fill
-                    src={"/images/liked.png"}
+                    src={'/images/liked.png'}
                     alt={name}
                 />
             </div>     
