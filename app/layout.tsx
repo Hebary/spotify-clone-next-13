@@ -1,6 +1,7 @@
 import './globals.css'
 import { Figtree } from 'next/font/google'
 import { Sidebar } from '@/ui'
+import SupabaseProvider from '@/providers/SupabaseProvider'
 const figtree = Figtree({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body className={figtree.className}>
-          <Sidebar>
-            {children}
-          </Sidebar>
+          <SupabaseProvider>
+            <Sidebar>
+              {children}
+            </Sidebar>
+          </SupabaseProvider>
         </body>
     </html>
   )
