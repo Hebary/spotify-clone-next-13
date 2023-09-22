@@ -17,6 +17,16 @@ const HomePage = () => {
             />
           </div>
       </Header>
+      <div className='mt-2 mb-7 px-6'>
+        <div className='flex justify-between items-center'>
+          <h1 className='text-white text-xl font-semibold'>
+            Newest Songs
+          </h1>
+        </div>
+        <div className=''>
+            Song list
+        </div>
+      </div>
     </div>
   )
 }
