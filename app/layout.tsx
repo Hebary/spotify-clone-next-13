@@ -2,6 +2,8 @@ import './globals.css'
 import { Figtree } from 'next/font/google'
 import { Sidebar } from '@/ui'
 import SupabaseProvider from '@/providers/SupabaseProvider'
+import UserProvider from '@/providers/UserProvider'
+
 const figtree = Figtree({ subsets: ['latin'] })
 
 export const metadata = {
@@ -9,18 +11,16 @@ export const metadata = {
   description: 'Listen to music',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode}) {
   return (
     <html lang="en">
         <body className={figtree.className}>
           <SupabaseProvider>
-            <Sidebar>
-              {children}
-            </Sidebar>
+            <UserProvider>
+              <Sidebar>
+                {children}
+              </Sidebar>
+            </UserProvider>
           </SupabaseProvider>
         </body>
     </html>
