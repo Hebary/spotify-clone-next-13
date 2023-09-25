@@ -1,8 +1,7 @@
 import './globals.css'
 import { Figtree } from 'next/font/google'
 import { Sidebar } from '@/ui'
-import SupabaseProvider from '@/providers/SupabaseProvider'
-import UserProvider from '@/providers/UserProvider'
+import { SupabaseProvider, UserProvider } from '@/providers'
 
 const figtree = Figtree({ subsets: ['latin'] })
 
