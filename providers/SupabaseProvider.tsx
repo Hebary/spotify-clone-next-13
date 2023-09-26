@@ -1,12 +1,12 @@
 "use client";
 
-import { Database } from '@/types_db';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { SessionContextProvider } from '@supabase/auth-helpers-react';
-
-'use client';
-
 import { FC, useState } from 'react'
+import { SessionContextProvider } from '@supabase/auth-helpers-react';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+
+import { Database } from '@/types_db';
+
+
 
 
 interface Props{

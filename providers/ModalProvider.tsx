@@ -23,7 +23,9 @@ const ModalProvider:FC<Props> = ({ children }) => {
 
     return (
         <>
-            <Modal/>
+            <Modal title={'test modal'} description={'test description'} isOpen={false} onChange={()=>{}}>
+                {'children'}    
+            </Modal> 
         </>
     )
 }
