@@ -5,10 +5,9 @@ import { Modal } from '@/ui';
 
 
 interface Props{
-    children: React.ReactNode
 }
 
-const ModalProvider:FC<Props> = ({ children }) => {
+const ModalProvider:FC<Props> = () => {
 
     const [isMounted, setIsMounted] = useState(false);
 
@@ -23,8 +22,13 @@ const ModalProvider:FC<Props> = ({ children }) => {
 
     return (
         <>
-            <Modal title={'test modal'} description={'test description'} isOpen={false} onChange={()=>{}}>
-                {'children'}    
+            <Modal 
+                title={'test modal'} 
+                description={'test description'} 
+                isOpen={true} 
+                onChange={()=>{}}
+            >
+                test
             </Modal> 
         </>
     )
