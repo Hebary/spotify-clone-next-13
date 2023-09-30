@@ -39,7 +39,9 @@ export const UserContextProvider = (props : Props) => {
     useEffect(() => {
       if (user && !isLoadingData && !userDetails && !subscription) {
         setisLoadingData(true);
+        
         Promise.allSettled([getUserDetails(), getSubscription()]).then((results) => {
+        
             const userDetailsPromise = results[0];
             const subscription = results[1];
             
@@ -53,6 +55,7 @@ export const UserContextProvider = (props : Props) => {
 
             setisLoadingData(false);
         })}
+        
         else if(!user && !isLoadingUser && !isLoadingData){
             setuserDetails(null);
             setSubscription(null);
