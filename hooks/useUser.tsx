@@ -26,6 +26,7 @@ export const UserContextProvider = (props : Props) => {
     } = useSessionContext();
 
     const user = useSupaUser();
+    
     const accessToken = session?.access_token ?? null;
 
     const [isLoadingData, setisLoadingData] = useState(false);
@@ -74,6 +75,5 @@ export const useUser = () => {
     if(context===undefined){
         throw new Error('user must be used within a UserContextProvider');
     }
-
     return context;
 }
