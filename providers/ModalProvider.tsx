@@ -1,8 +1,7 @@
 'use client';
 
 import { FC, useEffect, useState } from 'react'
-import { Modal } from '@/ui';
-
+import { AuthModal, Modal } from '@/ui';
 
 interface Props{
 }
@@ -22,14 +21,14 @@ const ModalProvider:FC<Props> = () => {
 
     return (
         <>
-            <Modal 
-                title={'Modal Title'} 
-                description={'Modal description'} 
+            <AuthModal 
+                title={'Auth Modal Title'} 
                 isOpen 
                 onChange={()=>{}}
+                description={'Auth Modal Description'}
             >
-                test children
-            </Modal> 
+                Test Children
+            </AuthModal> 
         </>
     )
 }
