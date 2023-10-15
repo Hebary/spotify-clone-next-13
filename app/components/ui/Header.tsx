@@ -7,6 +7,7 @@ import { twMerge } from 'tailwind-merge';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import Button from './Button';
+import { useAuthModal } from '@/hooks';
 
 
 interface Props{
@@ -15,6 +16,8 @@ interface Props{
 }
 
 const Header:FC<Props> = ({ children, className }) => {
+ 
+    const { onOpen } = useAuthModal();
     const router = useRouter();
     
     const handleLogout = () => {}
@@ -49,12 +52,12 @@ const Header:FC<Props> = ({ children, className }) => {
                 
                 <div className='flex justify-between items-center gap-x-4'>
                     <div>
-                        <Button onClick={ ()=>{} } className='bg-transparent text-neutral-300 font-medium'>
+                        <Button onClick={ onOpen } className='bg-transparent text-neutral-300 font-medium'>
                             Sign Up
                         </Button>
                     </div>
                     <div>
-                        <Button onClick={ ()=>{} } className='px-6 py-2 bg-white'>
+                        <Button onClick={ onOpen } className='px-6 py-2 bg-white'>
                             Log in
                         </Button>
                     </div>
